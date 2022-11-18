@@ -127,6 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="3 串\02 BF(Brute Force).cpp" />
+    <ClCompile Include="3 串\03 KMP算法.cpp" />
+    <ClCompile Include="4 排序\01 插入排序.cpp" />
     <ClCompile Include="4 排序\02 快排.cpp" />
     <ClCompile Include="2 栈和队列\作业02 t2.cpp" />
     <ClCompile Include="2 栈和队列\作业02 t3.cpp" />
@@ -143,7 +146,7 @@
     <ClCompile Include="1 线性表\作业01 t1_2.cpp" />
     <ClCompile Include="1 线性表\作业01 t1_3.cpp" />
     <ClCompile Include="1 线性表\作业01 t1_4.cpp" />
-    <ClCompile Include="1 线性表\作业01 t1_5.cpp" />
+    <ClCompile Include="1 线性表\作业01 t1_5%28rand link%29.cpp" />
     <ClCompile Include="1 线性表\作业01 t1_6.cpp" />
     <ClCompile Include="1 线性表\作业01 t1_7.cpp" />
     <ClCompile Include="2 栈和队列\01 栈的基本操作.cpp" />
@@ -154,7 +157,29 @@
     <ClCompile Include="2 栈和队列\作业02 t1.cpp" />
     <ClCompile Include="2 栈和队列\作业02 t4.cpp" />
     <ClCompile Include="3 串\01 串的运算.cpp" />
-    <ClCompile Include="4 排序\01 排序.cpp" />
+    <ClCompile Include="01 try.cpp" />
+    <ClCompile Include="4 排序\02 选择排序.cpp" />
+    <ClCompile Include="4 排序\03 冒泡排序.cpp" />
+    <ClCompile Include="4 排序\04 归并排序%28x%29.cpp" />
+    <ClCompile Include="4 排序\04.1 自然归并排序.cpp" />
+    <ClCompile Include="4 排序\05 快速排序.cpp" />
+    <ClCompile Include="4 排序\07 基数排序.cpp" />
+    <ClCompile Include="4 排序\作业3 my_t5.cpp" />
+    <ClCompile Include="4 排序\作业3 t1.cpp" />
+    <ClCompile Include="4 排序\作业3 t4.cpp" />
+    <ClCompile Include="4 排序\作业3 t5.cpp" />
+    <ClCompile Include="4 排序\作业3 t6.cpp" />
+    <ClCompile Include="4 排序\06 希尔排序（k.cpp" />
+    <ClCompile Include="5 数组及广义表\01 矩阵转置.cpp" />
+    <ClCompile Include="6 树\01 遍历.cpp" />
+    <ClCompile Include="6 树\02 二叉树.cpp" />
+    <ClCompile Include="6 树\作业04 T10.cpp" />
+    <ClCompile Include="6 树\作业04 T11.cpp" />
+    <ClCompile Include="6 树\作业04 T12.cpp" />
+    <ClCompile Include="6 树\作业04 T3,4,5,8,9.cpp" />
+    <ClCompile Include="6 树\作业04 T7.cpp" />
+    <ClCompile Include="7 查找\03 查找树.cpp" />
+    <ClCompile Include="7 查找\05 B-树.cpp" />
     <ClCompile Include="tem.cpp" />
     <ClCompile Include="2 栈和队列\作业02 t5.cpp" />
     <ClCompile Include="2 栈和队列\作业02 t5 my.cpp" />
