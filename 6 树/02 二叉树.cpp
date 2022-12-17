@@ -19,7 +19,7 @@ node* transfer(lrnode  tree[], int n)
 	root = new  node;
 	p = root;
 	top = 0;
-	for (i = 0; i < n - 1; i ++)
+	for (i = 0; i < n - 1; i++)
 	{
 		p->data = tree[i].data;
 		if (tree[i].rtag == '0')
@@ -48,6 +48,5 @@ void preorder(node* t) {
 }
 
 int main() {
-
 }
 #endif

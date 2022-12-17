@@ -9,8 +9,7 @@ struct node {
 };
 
 //利用递归构造完全二叉树，n为层数
-void makeBinaryTree(node* &head,int n) {
-
+void makeBinaryTree(node*& head, int n) {
 	if (n <= 0) {	//到底赋null
 		head = NULL;
 	}
@@ -20,7 +19,6 @@ void makeBinaryTree(node* &head,int n) {
 		makeBinaryTree(head->leftChild, n - 1);	//左
 		makeBinaryTree(head->rightChild, n - 1);	//右
 	}
-	
 }
 
 //利用栈（即递归）实现后序遍历
@@ -31,13 +29,13 @@ void printBinaryTree(node* head) {
 	}
 
 	//树T的后序对应T'的中序
-	printBinaryTree(head->leftChild);	
+	printBinaryTree(head->leftChild);
 	cout << head->data << " ";
 	printBinaryTree(head->rightChild);
 }
 
 //交换结点
-void swapBinaryTree(node* &head) {
+void swapBinaryTree(node*& head) {
 	if (head == NULL) return;
 	swap(head->leftChild, head->rightChild);	//先换上面的，把它移到最下面也可以
 	swapBinaryTree(head->leftChild);
@@ -47,7 +45,6 @@ void swapBinaryTree(node* &head) {
 //计算叶子结点的数量
 //树的叶子结点数量为转化成二叉树后的左结点为空的数量
 void coutChild(node* head) {
-	
 	if (head == NULL) return;
 	if (head->leftChild == NULL)	//左孩子为空就加一
 		cout << head->data << " ";
@@ -63,7 +60,6 @@ int countConRight(node* head) {
 		sum += countConRight(head->rightChild);
 	else
 		return sum;
-
 }
 
 //计算树的次数
@@ -74,7 +70,7 @@ int countTimes(node* head) {
 
 	//计算当前结点的最大连续值
 	//跟左右孩子的比较,取最大值
-	num = max(max(countTimes(head->rightChild),countTimes(head->leftChild)),num);
+	num = max(max(countTimes(head->rightChild), countTimes(head->leftChild)), num);
 	return num;
 }
 
@@ -104,7 +100,7 @@ bool isSimilarTree(node* tree1, node* tree2) {
 int main() {
 	srand((unsigned int)time(NULL));
 	node* head = NULL, * head2 = NULL;
-	
+
 	// 计算次数测试
 	makeBinaryTree(head, 8);
 	head->rightChild = NULL;
@@ -141,6 +137,5 @@ int main() {
 //
 ////swapBinaryTree(head);
 ////printBinaryTree(head);
-
 
 #endif

@@ -180,11 +180,18 @@
     <ClCompile Include="6 树\作业04 T7.cpp" />
     <ClCompile Include="7 查找\03 查找树.cpp" />
     <ClCompile Include="7 查找\05 B-树.cpp" />
+    <ClCompile Include="7 查找\作业05 t3.cpp" />
+    <ClCompile Include="7 查找\作业05 t4.cpp" />
+    <ClCompile Include="7 查找\哈夫曼编码.cpp" />
+    <ClCompile Include="8 图\01 DFS.cpp" />
+    <ClCompile Include="8 图\02 BFS.cpp" />
+    <ClCompile Include="8 图\04-1 最小生成树ChatGPT.cpp" />
     <ClCompile Include="tem.cpp" />
     <ClCompile Include="2 栈和队列\作业02 t5.cpp" />
     <ClCompile Include="2 栈和队列\作业02 t5 my.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="8 图\02.1 BFS ChatGPT.cpp" />
     <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

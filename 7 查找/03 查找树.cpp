@@ -9,7 +9,6 @@ struct  node {
 node* t, * p, * q;
 char  a;
 
-
 void search(node* t, char a, node*& p_p, node*& p_q)
 {
 	p_p = NULL;
@@ -24,7 +23,6 @@ void search(node* t, char a, node*& p_p, node*& p_q)
 	}
 	return;
 }
-
 
 int insert(node*& p_t, char a)
 {
@@ -41,7 +39,6 @@ int insert(node*& p_t, char a)
 	else p->rchild = r;
 	return(0);
 }
-
 
 int deleteNode(node*& p_t, char a)
 {
@@ -73,16 +70,15 @@ int deleteNode(node*& p_t, char a)
 
 		if (q == p->lchild)
 			p->lchild = q->lchild;
-		else 
+		else
 			p->rchild = q->lchild;
 	}
 	delete(q);
 	return(0);
 }
 
-
 void midOrder(node* head) {
-	if (!head) return ;
+	if (!head) return;
 	midOrder(head->lchild);
 	cout << head->data << " ";
 	midOrder(head->rchild);

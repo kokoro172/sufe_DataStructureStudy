@@ -192,8 +192,27 @@
     <ClCompile Include="7 查找\05 B-树.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="8 图\01 DFS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="8 图\02 BFS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="8 图\04-1 最小生成树ChatGPT.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7 查找\作业05 t3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7 查找\哈夫曼编码.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7 查找\作业05 t4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+    <None Include="8 图\02.1 BFS ChatGPT.cpp" />
   </ItemGroup>
 </Project>
