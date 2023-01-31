@@ -22,7 +22,7 @@ void mat_fast_transpose(int a[][3], int b[][3])
 		y[0] = 1;
 		for (i = 1; i < n; i++)
 			y[i] = y[i - 1] + x[i - 1];
-		for (i = 1; i <= t; i ++)
+		for (i = 1; i <= t; i++)
 		{
 			j = y[a[i][1]];
 			b[j][0] = a[i][1];
@@ -33,7 +33,6 @@ void mat_fast_transpose(int a[][3], int b[][3])
 	}
 }
 int main() {
-
 }
 
 #endif

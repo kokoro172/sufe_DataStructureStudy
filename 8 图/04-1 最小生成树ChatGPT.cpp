@@ -96,11 +96,10 @@ void dfs(int u)
 int main()
 {
 	//! 输入顶点和拓展
-		cin >> n >> m;
+	cin >> n >> m;
 
-	
-		//! 建立邻接表
-		create_adj_list(head, n, e, m);
+	//! 建立邻接表
+	create_adj_list(head, n, e, m);
 
 	//! 从顶点1开始处理
 	dfs(1);

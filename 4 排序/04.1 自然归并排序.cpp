@@ -9,7 +9,6 @@ using namespace std;
 //	cout << "\n";
 //}
 
-
 //利用pos数组记录长度为a的数组的升序的“断掉的地方”，
 //pos记录的是升序的起始位置，如果需要上一个组的结束位置，减一即可
 //n是a 的长度
@@ -59,7 +58,6 @@ void mergeSort(int a[], int b[]) {
 
 	merge(a, b, pos[0], pos[posLen - 1] - 1, N - 1);	//合并最后的2组
 }
-
 
 int main() {
 	int a[N] = { 1, 2, 3, 0, 1, 0 ,5 ,6, 5, 4 };	//分成5组

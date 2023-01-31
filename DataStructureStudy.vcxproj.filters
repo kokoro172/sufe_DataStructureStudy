@@ -210,6 +210,15 @@
     <ClCompile Include="7 查找\作业05 t4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="作业04 栈实现后序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="入栈求出栈.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="try.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

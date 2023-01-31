@@ -34,7 +34,6 @@ public:
 	int getPath(int beg_a, int beg_b, int end_a, int end_b);	//生成路径，前两个参数是起点，后两个是终点。给程序增加更大的灵活性
 };
 
-
 //构造函数，初始化边界和内部大小
 Maze::Maze(int a, int b) {
 	m = a; n = b;
@@ -42,7 +41,7 @@ Maze::Maze(int a, int b) {
 		for (int j = 0; j < n + 2; j++) {
 			board[i][j] = '1';	//把所有的包括边界的格子初始化为1
 			mark[i][j] = 0;	//所有的格子都标记为未走过
-		}	
+		}
 	}
 
 	mv[0].a = 0; mv[0].b = -1;	//往左
@@ -54,7 +53,7 @@ Maze::Maze(int a, int b) {
 //把路线变成*
 void Maze::refreshMaze() {
 	while (!s.empty()) {
-		int a = s.top().x; 
+		int a = s.top().x;
 		int b = s.top().y;
 		board[a][b] = '*';
 		s.pop();
@@ -62,7 +61,7 @@ void Maze::refreshMaze() {
 }
 
 //输入迷宫内部
-void Maze::createMaze(){
+void Maze::createMaze() {
 	cout << "input maze:\n";
 	for (int x = 1; x <= m; x++)
 		for (int y = 1; y <= n; y++)
@@ -76,7 +75,7 @@ void Maze::outputMaze() {
 		for (int j = 0; j <= n + 1; j++) {
 			cout << board[i][j] << " ";
 		}
-		cout << "\n";	
+		cout << "\n";
 	}
 	cout << "\n";
 }
@@ -122,7 +121,7 @@ int Maze::getPath(int beg_a, int beg_b, int end_a, int end_b) {
 				s.top().x = nowRow;
 				s.top().y = nowCol;	//坐标的更新有一种“滞后性”，这样相当于提前找下下个点
 				s.top().d = dir;	//更新当前点位的方向
-				
+
 				tem_p.makePoint(0, 0, -1);	s.push(tem_p);//这就是滞后性
 				nowRow = nextRow; nowCol = nextCol;	//把当前坐标更新为下一个坐标
 				dir = -1;	//把方向也更新一下

@@ -1,8 +1,7 @@
 #if 0
-#include<iostream>	
+#include<iostream>
 constexpr int MAXN = 100;
 using namespace std;
-
 
 //以前序形式存放结点附加左标志位和右指针，以结构体数组的形式储存树
 struct node {
@@ -31,7 +30,7 @@ void createPreTree(node tree[]) {
 }
 
 //给它赋值，如果没开辟空间就开辟
-void createBNode(bnode* &bhead,char c, bnode* l, bnode* r) {
+void createBNode(bnode*& bhead, char c, bnode* l, bnode* r) {
 	if (bhead == NULL)
 		bhead = new bnode;
 	bhead->data = c;
@@ -40,7 +39,7 @@ void createBNode(bnode* &bhead,char c, bnode* l, bnode* r) {
 }
 
 //附加左标志位和右指针 转化为 标准形式储存
-bnode* convertPreToBin(int pos,node tree[]) {
+bnode* convertPreToBin(int pos, node tree[]) {
 	bnode* bhead = new bnode;
 	bhead->data = tree[pos].data;	//对该结点赋值
 
@@ -58,11 +57,10 @@ bnode* convertPreToBin(int pos,node tree[]) {
 	return bhead;
 }
 
-
 int main() {
 	node tree[MAXN];
 	createPreTree(tree);
-	
+
 	bnode* head = convertPreToBin(0, tree);
 	cout << tree[0].data;
 }

@@ -8,7 +8,7 @@ struct node {
 };
 
 //选择排序
-void selectionSort(node *head) {
+void selectionSort(node* head) {
 	node* p = head;//p用于往后遍历每一个元素
 	node* q = head;	//q用于指向排好序的末尾的结点的后一个结点
 	node* t = head;	//t用于指向最小元素
@@ -39,7 +39,7 @@ node* createRandLink()
 {
 	srand((unsigned int)time(NULL));
 	node* head = NULL, * p, * q;
-	int n = rand() % 20 - 10;   
+	int n = rand() % 20 - 10;
 	head = new node;
 	p = head;
 	p->data = n;
@@ -56,7 +56,7 @@ node* createRandLink()
 }
 
 //此函数用于输出链表
-void outPutLink(node *head) {
+void outPutLink(node* head) {
 	node* p = head;
 	while (p != NULL) {
 		cout << p->data << " -> ";

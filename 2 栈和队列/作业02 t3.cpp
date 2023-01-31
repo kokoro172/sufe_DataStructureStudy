@@ -7,7 +7,7 @@ struct node {
 	node* link;
 };
 
-class  STACK{ 
+class  STACK {
 public:
 	node* top = NULL;
 	int push(int a);

@@ -1,7 +1,7 @@
 #if 0
 #include<iostream>
 #include<string>
-#define MAXN 100 
+#define MAXN 100
 using namespace std;
 
 //char s[MAXN], sl[MAXN], s2[MAXN];
@@ -38,7 +38,7 @@ bool strsub(char sl[], int  i, int  j, char  s2[])
 	return (true);
 }
 
-bool strins(char sl[], int i, char  s2[]){
+bool strins(char sl[], int i, char  s2[]) {
 	int m, n, k;
 	if (i<0 || i>(m = strlen(sl)) || m + (n = strlen(s2)) > MAXN)
 		return(false);
@@ -80,9 +80,5 @@ int main() {
 	cin.getline(str1, MAXN);
 	cout << "str2:\n";
 	cin.getline(str2, MAXN);
-	
-
-
-	
 }
 #endif

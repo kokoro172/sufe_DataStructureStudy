@@ -24,7 +24,7 @@ int kmpSearch(string str, string p) {
 	int i = 0, j = 0;
 	while (i < str.length()) {
 		if (str[i] == p[j]) {	//匹配，指针后移
-			i++; 
+			i++;
 			j++;
 		}
 		else if (j > 0) {//不匹配，根据next回退

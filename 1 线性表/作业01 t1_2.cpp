@@ -5,8 +5,6 @@
 constexpr auto MAXSIZE = 10;;
 using namespace std;
 
-
-
 //说明：数组的序号为多项式的次数，数组每一项储存的数为该项的系数。
 //即：a[0] 表示 系数为a[0]、次数为0 的项
 
@@ -22,7 +20,7 @@ int* createRandPoly() {
 
 //手动输入系数
 int* createPoly(int ap[]) {
-	if(ap != NULL) 	delete[] ap;
+	if (ap != NULL) 	delete[] ap;
 	int coef, exp;
 	int* a = new int[MAXSIZE];
 	for (int i = 0; i < MAXSIZE; i++) {	//首先初始化，全部设置为0，防止有没输入的项导致
@@ -65,29 +63,29 @@ int* subPoly(int a[], int b[]) {
 
 //输出多项式
 void outputPoly(int a[]) {
-    bool isFirst = true;
-    for (int i = MAXSIZE - 1; i > 0; i--) {
-        if (a[i] == 0) continue;
-        else if (a[i] > 0) {
-            if (isFirst) {	//如果是多项式的第一项
-                cout << a[i] << "x^" << i;
-                isFirst = false;
-            }
-            else {
-                cout << " + " << a[i] << "x^" << i;
-            }
-        }
-        else {
+	bool isFirst = true;
+	for (int i = MAXSIZE - 1; i > 0; i--) {
+		if (a[i] == 0) continue;
+		else if (a[i] > 0) {
 			if (isFirst) {	//如果是多项式的第一项
-				cout << "-"<< -a[i] << "x^" << i;	//由于负号和数字在一起不便于观察，便和正项统一格式
+				cout << a[i] << "x^" << i;
+				isFirst = false;
+			}
+			else {
+				cout << " + " << a[i] << "x^" << i;
+			}
+		}
+		else {
+			if (isFirst) {	//如果是多项式的第一项
+				cout << "-" << -a[i] << "x^" << i;	//由于负号和数字在一起不便于观察，便和正项统一格式
 				isFirst = false;
 			}
 			else {
 				cout << " - " << -a[i] << "x^" << i;
 			}
-        }
-    }
-	
+		}
+	}
+
 	if (a[0] > 0) {
 		cout << " + " << a[0];
 	}
@@ -96,8 +94,6 @@ void outputPoly(int a[]) {
 	}
 	cout << "\n\n";
 }
-
-
 
 int main() {
 	int* a_poly = NULL, * b_poly = NULL;
@@ -116,7 +112,7 @@ int main() {
 	else {	//默认随机
 		a_poly = createRandPoly();	//随机创建多项式
 	}
-	
+
 	cout << "\n多项式a：\n";
 	outputPoly(a_poly);
 
@@ -133,7 +129,7 @@ int main() {
 	else {
 		b_poly = createRandPoly();	//随机创建多项式
 	}
-	
+
 	cout << "\n多项式b：\n";
 	outputPoly(b_poly);
 

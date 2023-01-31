@@ -32,8 +32,6 @@ void mergeSort(int a[], int b[], int begin, int end) {
 	}
 }
 
-
-
 int main() {
 	int a[10] = { 20,10,90,99,40,50,30,60,80,70 };
 	int b[10];

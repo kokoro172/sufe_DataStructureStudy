@@ -189,6 +189,9 @@
     <ClCompile Include="tem.cpp" />
     <ClCompile Include="2 栈和队列\作业02 t5.cpp" />
     <ClCompile Include="2 栈和队列\作业02 t5 my.cpp" />
+    <ClCompile Include="try.cpp" />
+    <ClCompile Include="作业04 栈实现后序.cpp" />
+    <ClCompile Include="入栈求出栈.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="8 图\02.1 BFS ChatGPT.cpp" />

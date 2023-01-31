@@ -5,12 +5,12 @@ using namespace std;
 struct node {	//穿线树
 	char data;	//值
 	int ltag = 0, rtag = 0; //当ltag = 0时，lchild指向它的左子结点；当ltag = 1时，lchild指向它对应顺序（比如中序）的前一个值的结点
-	node* lchild, * rchild;	
+	node* lchild, * rchild;
 };
 
 //将中序穿线树以前序方式输出
 void prePrint(node* head) {
-	while(head != NULL){
+	while (head != NULL) {
 		cout << head->data << " ";
 		if (head->ltag == 0 && head->lchild) {	//一直往左跑，跑到底。（如果左子结点存在且不为空）
 			head = head->lchild;
@@ -39,7 +39,6 @@ void prePrint(node* head) {
 //		}
 //	}
 //}
-
 
 //由于如果有重复数值可能会有多种情况，所以我们这里假设没有重复数值
 //前序的第一个为根节点，中序的根节点左右方分别是左右子树，所以可以利用这一点递归
@@ -77,7 +76,7 @@ node* makeTreeByPreIno(char pre[], char ino[], int n) {	//传入的两个参数分别为：
 
 //将二叉树（中序）线索化
 //pre指向前一个结点
-void createTree(node* head, node* &pre) {
+void createTree(node* head, node*& pre) {
 	if (head) {
 		createTree(head->lchild, pre);
 
@@ -99,13 +98,11 @@ void createTree(node* head, node* &pre) {
 int main() {
 	char a[] = "ABDGCEF";	//前序
 	char b[] = "GDBAECF";	//中序
-	node *head = makeTreeByPreIno(a, b, 9), *pre = NULL;
-
+	node* head = makeTreeByPreIno(a, b, 9), * pre = NULL;
 
 	createTree(head, pre);
 	head->rchild->rchild->rchild = NULL;
 	//pre = NULL;	//对最后一个结点线索化
-
 
 	//if (!pre) cout << "寄\n";
 	prePrint(head);

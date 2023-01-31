@@ -20,13 +20,13 @@ node* transfer(lrnode  tree[], int n)
 	root = new  node;
 	p = root;
 	top = 0;
-	for (i = 0; i < n - 1; i ++)
+	for (i = 0; i < n - 1; i++)
 	{
 		p->data = tree[i].data;
 
 		if (tree[i].rtag == '0')
 			stack[top++] = p;	//入栈
-		else 
+		else
 			p->rchild = NULL;
 
 		q = new node;
@@ -59,7 +59,7 @@ lrnode* findFatherNode(lrnode tree[], char a, int length) {	//传入的变量为：附加
 	int i = 0;
 	for (; i < length; i++) {	///模拟建树
 		if (tree[i].data == a) break;	//找到了
-		if (tree[i].rtag == '0') 
+		if (tree[i].rtag == '0')
 			treeStk.push(&tree[i]);	//如果它存在右子结点，就入栈
 
 		if (tree[i].ltag == '1')	//如果这个结点没有左子结点，说明下一个结点就是某个结点的右子结点
@@ -98,7 +98,7 @@ int main() {
 	char a = 'G';
 
 	makeTree(tree, 8, dataA, ltagA, rtagA);
-	lrnode *tem = findFatherNode(tree, a, 8);
+	lrnode* tem = findFatherNode(tree, a, 8);
 	if (tem != NULL) {	// 若返回值为空，说明有错
 		cout << "父节点的地址：" << tem << endl;
 		cout << "父节点的值：" << tem->data << endl;

@@ -29,7 +29,7 @@ void dirSelSort(int a[], int n) {
 
 int main() {
 	int a[10] = { 1,5 ,6, 8, 9, 6, 45 ,5, 2, 1 };
-	dirSelSort(a,10);
+	dirSelSort(a, 10);
 	for (int i : a) cout << i << " ";
 }
 #endif

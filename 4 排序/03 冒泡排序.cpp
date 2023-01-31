@@ -2,7 +2,6 @@
 #include<iostream>
 using namespace std;
 
-
 void bubbleSort(int a[11], int n) {
 	bool isS = false;
 	for (int i = 0; i < n; i++) {
@@ -16,7 +15,6 @@ void bubbleSort(int a[11], int n) {
 		if (!isS) break;
 	}
 }
-
 
 int main() {
 	int a[] = { 1,11,12,1,0,6,5,4,58,6,22 };

@@ -21,7 +21,6 @@ int bruteForce(string main, string sub) {
 	return -1;	//找不到匹配的就返回-1
 }
 
-
 int main() {
 	string str1, str2;
 	str1 = "wangkewei";

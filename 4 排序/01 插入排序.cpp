@@ -26,7 +26,6 @@ void insertionSort(int a[], int len) {
 	}
 }
 
-
 int main() {
 	int a[10] = { 1,5,3,6,2,45,51,6,33,0 };
 	insertionSort(a, 10);

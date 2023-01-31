@@ -10,16 +10,16 @@ struct node {
 
 /**
  * .递归地判断是不是二叉查找树
- * 
+ *
  * \param head 传入的根结点
- * \return 
+ * \return
  */
-bool isBST(node *head) {
+bool isBST(node* head) {
 	if (head->left == NULL && head->right == NULL) {	//全为空
 		return true;
 	}
-	else if(head->left == NULL){		//右不为空
-		return head->num < head->right->num && isBST(head->right);	//右子树为查找树而且右大于左
+	else if (head->left == NULL) {		//右不为空
+		return head->num < head->right->num&& isBST(head->right);	//右子树为查找树而且右大于左
 	}
 	else if (head->right == NULL) {	//左不为空
 		return head->num > head->left->num && isBST(head->left);

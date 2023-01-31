@@ -8,19 +8,17 @@ struct node {
 	node* rightChild;	//右子结点
 };
 
-
 void printBinaryTree(node* head) {
 	if (head == NULL) {	//某结点为空，返回
 		return;
 	}
 
 	//树T的后序对应T'的中序
-	printBinaryTree(head->leftChild);
 	cout << head->data << " ";
+	printBinaryTree(head->leftChild);
+	
 	printBinaryTree(head->rightChild);
 }
-
-
 
 //t7，利用二叉树的前序和中序建立树
 // https://weibaohang.blog.csdn.net/article/details/110233951?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-110233951-blog-105255475.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-110233951-blog-105255475.pc_relevant_default&utm_relevant_index=1
@@ -48,28 +46,27 @@ node* makeTreeByPreIno(char pre[], char ino[], int n) {	//传入的两个参数分别为：
 
 	// 首先是左子树，pre[0]已经是根节点了，所以需要“后移”一位
 	// 中序的“子树范围”受leftNum（左子树大小）限制，所以相当于ino和leftNum一起“截取”了该子树
-	head->leftChild = makeTreeByPreIno(pre + 1, ino, leftNum);	
+	head->leftChild = makeTreeByPreIno(pre + 1, ino, leftNum);
 
 	// 接着是右子树，它的起始位置等于起点加左子树的大小。
 	// 右子树的起点则为p+1，长度为总长减去左子树长（找到的根节点后面的部分）
 	// 而长度则为剩下一部分的长度（传入的长度减一，因为前序的第一个已经是根节点了，所以总长度减一）减去左子树长度
-	head->rightChild = makeTreeByPreIno(pre + 1 + leftNum, p + 1, n - leftNum - 1);	
+	head->rightChild = makeTreeByPreIno(pre + 1 + leftNum, p + 1, n - leftNum - 1);
 
 	return head;
 }
 
 bool isCompleteBT(node* head) {
-	if (head->leftChild == NULL && 
+	if (head->leftChild == NULL &&
 		head->rightChild == NULL) {	//左右子树均为空，说明是叶子结点，返回真
 		return true;
 	}
 	else if (head->leftChild != NULL && head->rightChild != NULL) {	//如果左右子树均不为空，递归下去
-		return isCompleteBT(head->leftChild) && isCompleteBT(head->rightChild);	
+		return isCompleteBT(head->leftChild) && isCompleteBT(head->rightChild);
 	}
 	else
 		return false;	//一个为空，一个不为空，不是完全二叉树
 }
-
 
 int main() {
 	node* head = NULL;
@@ -80,6 +77,6 @@ int main() {
 	head = makeTreeByPreIno(pre, ino, 7);
 
 	cout << endl << isCompleteBT(head) << endl;
-	printBinaryTree(head);	//期望输出：gdbaecf
+	printBinaryTree(head);	//期望输出： 
 }
 #endif

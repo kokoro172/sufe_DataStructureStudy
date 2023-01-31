@@ -7,11 +7,11 @@ struct node {
 	node* link;
 };
 
-node* create_link(char a[]){
+node* create_link(char a[]) {
 	if (a[0] == '\0') return NULL;
 
 	node* head = new node;
-	head -> data = a[0]; head->link = NULL;
+	head->data = a[0]; head->link = NULL;
 	node* p = head, * q;	//p:指向尾结点，q：创建新结点
 
 	int i = 1;
@@ -24,7 +24,7 @@ node* create_link(char a[]){
 	}
 	return head;
 }
-void Out_link(node* head){
+void Out_link(node* head) {
 	node* p = head;
 	while (p != NULL) {
 		cout << p->data << " -> ";
@@ -42,7 +42,7 @@ node* reverse_link(node* head)
 		mid->link = left;	//反转
 		left = mid; mid = right; right = right->link;	//接上去
 	}
-	mid->link = left; 
+	mid->link = left;
 	return mid;
 }
 

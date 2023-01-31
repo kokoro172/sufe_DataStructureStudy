@@ -1,4 +1,4 @@
-#if 1
+#if 0
 #include<iostream>
 using namespace std;
 
@@ -10,7 +10,7 @@ struct node {
 
 /**
  * . 构造满树
- * 
+ *
  * \param head 要构造的二叉树的根结点
  * \param n 树的层数
  */
@@ -28,7 +28,7 @@ void makeBinaryTree(node*& head, int n) {
 
 /**
  * . 利用递归计算树的高度。当前结点的高度 = 子树最大高度 + 1
- * 
+ *
  * \param head	头结点
  * \return 返回当前结点的高度
  */
@@ -49,7 +49,8 @@ int countHeight(node* head) {
 
 int main() {
 	node* head = NULL;
-	makeBinaryTree(head,5);
+	makeBinaryTree(head, 5);
+
 	head->left->left = NULL;
 	head->left->right = NULL;
 	head->right->left = NULL;
